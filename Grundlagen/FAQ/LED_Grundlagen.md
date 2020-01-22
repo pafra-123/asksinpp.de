@@ -5,7 +5,8 @@ Sie werden in verschiedenster Form in Lampen verbaut, doch stellt sich oft die F
 im Kontext des SmartHome umgehen soll. Dieser Artikel soll einige Grundlagen und Verständnis schaffen.
 
 Aus elektrotechnischer Sicht wird die Lektüre auf
-[ElectronicsTutorials](https://www.electronics-tutorials.ws/de/dioden/leuchtdiode.html) nahegelegt!
+[ElectronicsTutorials](https://www.electronics-tutorials.ws/de/dioden/leuchtdiode.html) 
+und [Mikrocontroller.net](https://www.mikrocontroller.net/articles/LED) nahegelegt!
 
 tldr;
 * Der Strom kann durch eine LED nur in eine Richtung fließen. Es muss also auf die Polung geachtet werden.
@@ -18,8 +19,7 @@ tldr;
 * Leistung [Watt] = Spannung [Volt] * Strom [Ampere]
 
 Achtung: Parallelschaltung von LEDs ohne Vorwiderstand ist nicht zu empfehlen. Durch leichte Unterschiede 
-im Produktionsprozess und damit in der Kennlinie könnte eine LED auf der Kennlinie *davonlaufen* und 
-durch zu hohen Strom zerstört werden.
+im Produktionsprozess und damit in der Kennlinie könnte eine LED (mit gleicher Durchlassspannung) auf der Kennlinie *davonlaufen* und durch zu hohen Strom zerstört werden. Da mit steigender Temperatur die Durchlassspannung sinkt verstärkt sich dieser Effekt. 
 
 Eine LED benötigt eine gewisse Leistung die in Watt angegeben ist,
 diese setzt sich aus der benötigten Spannung und dem Strom zusammen, also `P = U * I`
@@ -145,3 +145,10 @@ Deckensponts **in Reihe** versorgt werden können.
 
 Durch das kapazitive Verhalten von LED-Leuchtmitteln können beim Einschalten hohe Stromspitzen enstehen was z.B. zum 
 Festkleben von Relais führen kann. Für dieses Problem gibt es Einschaltstrombegrenzer (ESB) oder Nulldurchgangsschalter.
+
+### LED leuchtet bei 0%
+
+Wird eine _schwaches_ LED-Leuchtmittel hinter einem Phasendimmer betrieben, dann kann es vorkommen, dass selbst bei 0% Dimmung die LED weiterhin leuchtet / glimmt. Ein Grundlastelement kann hier abhilfe schaffen. Siehe [LED Grundlastelement: Funktionsweise und Anschluss](https://ledtipps.net/grundlastelement/) Artikel von LEDTipps.
+
+Ist der LED-Controller **hinter** dem Netzteil verbaut, dann liegt ein anderes Problem vor und ein Grundlastelement bietet keine Lösung.
+
